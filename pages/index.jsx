@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useEffect} from "react"
+import useGoogleOptimize from '@react-hook/google-optimize'
 
 
 export default function Home() {
@@ -18,9 +19,11 @@ export default function Home() {
 
   },[])
 
-  return (
-    <div className={styles.container} onClick={()=>{console.log(variant)}}>
-      CHECK
-    </div>
-  )
+  const CartVariant = useGoogleOptimize('kMbu3v8SR5yh6Nao4eUjyg',[false, true])
+
+  useEffect(()=> {
+    console.log(88, CartVariant)
+  },[CartVariant])
+
+  return CartVariant ? 'tak': 'nie'
 }
