@@ -38,7 +38,7 @@ const App = ({ Component, pageProps }) => {
           `,
         }}
       />
-      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TG38BPF"></script>
+      <Script src="https://www.googleoptimize.com/optimize.js?id=OPT-TG38BPF"></Script>
       <Component {...pageProps} />
     </>
   )

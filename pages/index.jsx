@@ -7,8 +7,9 @@ import {useEffect} from "react"
 export default function Home() {
   useEffect(()=> {
     if (window.dataLayer) {
-      window.dataLayer.push({ event: "optimize.activate" });
+      window.dataLayer.push({event: 'optimize.activate'});
     }
+    console.log(33, window.dataLayer)
 
     if (window.google_optimize !== undefined) {
       const variant = window.google_optimize.get('kMbu3v8SR5yh6Nao4eUjyg');
